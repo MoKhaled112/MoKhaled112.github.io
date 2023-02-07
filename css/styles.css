@@ -1,0 +1,252 @@
+/* --- Fonts Importing --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Quicksand:wght@300&family=Rufina&display=swap');
+
+
+/* ---- Color Pallete ---- */
+
+
+:root {
+	--black: #121212;
+	--silver: #BDC3C7; 
+    --green: #2ECC71;
+    --WetAsphalt: #4e657c;
+    --Concrete: #95A5A6;
+}
+
+/* ---- General Rules ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+    background: var(--silver);
+}
+
+body {
+    background: var(--black);
+    margin: 0;
+    color: var(--WetAsphalt);
+}
+
+/* Base Rules*/
+h1 {
+    font-size: 60px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 0em;
+}
+
+h2 {
+    border-bottom: 5px dotted var(--blue);
+    font-family: 'Lato', Sans-Serif;
+    font-size: 2.5em;
+    color: var(--WetAsphalt);
+}
+
+p {
+    font-size: 27px;
+    color: var(--WetAsphalt);
+    font-family: 'Lato', Sans-Serif;
+}
+
+span {
+    font-size: 18px;
+    color: var(--WetAsphalt);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.green {
+	font-weight: normal;
+    color: var(--green);
+}
+
+#Bio {
+    position: relative;
+    min-height: 50vh;
+}
+
+section {
+    position: relative;
+}
+
+/* ---- Layout Rules ---- */
+
+main {
+    margin: 10vh 0em 5vh;
+}
+
+.container {
+    max-width: 70em;
+    padding: 0em 3em 0em 3em;
+    text-align: left;
+}
+
+/* ---- Portfolio ---- */
+
+.cardContainer {
+    width: 100%;
+    display: inline-flex;
+}
+
+.card {
+    background-color: var(--black);
+    border-radius: 10px;
+    width: 30%;
+    margin-top: 25px;
+    margin-right: 30px;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cardImage {
+    aspect-ratio: 300/250;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.cardText {
+    padding: 1vw;
+}
+
+.cardTitle {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.cardDesc {
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.cardButton {
+    margin-top: auto;
+    text-align: center;
+}
+
+.cardButton a {
+    font-size: 16px;
+    color: var(--black);
+    background-color: #198754;
+    border: 1px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 6px;
+    transition: color 0.4s;
+    margin-bottom: 10px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.cardButton a:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardButton .notAllowed {
+    cursor: not-allowed;
+    box-shadow: none;
+    background-color: gray;
+}
+
+.cardButton .notAllowed:hover {
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 700px){
+    .container {
+        padding: 0em 2em 0em 2em;
+    }
+    .cardContainer {
+    display: flex;
+    flex-direction: column;
+	align-self: center;
+    align-items: center;
+    }
+    .card {
+    width: 80%;
+    margin-top: 100px;
+    height: 360px;
+    }
+    .cardImage {
+    width: 100%;
+    height: 200px;
+    }
+}
+
+/* ---- Socials ---- */
+
+.Socials {
+    align-self: center;
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.SocialContainer {
+    font-size: 20px;
+    color: var(--silver);
+    margin-top: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.SocialContainer a {
+    font-size: 36px;
+    color: var(--WetAsphalt);
+    transition: color 0.4s;
+    text-decoration: none;
+}
+
+span a {
+    max-height: 64px;
+}
+
+/* Header Styles */
+
+.navbarContainer {
+    background-color: var(--WetAsphalt);
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+	align-self: center;
+    align-items: center;
+    display: inline-flex;  
+}
+
+.menu__link {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Lato', Sans-Serif;
+    padding: 0.5em;
+    text-decoration: none;
+    color: var(--black);
+    transition: ease 0.4s all;
+}
+
+.menu__link:hover {
+    background: var(--silver);
+    color: var(--WetAsphalt);
+    transition: ease 0.3s all;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: var(--Concrete);
+    padding: 10px;
+}
+
+.page__footer span{
+    color: var(--black);
+}
